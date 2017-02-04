@@ -47,9 +47,9 @@ module.exports = {
       }
     }),
     new HtmlWebpackPlugin({
-      template: 'index.html'
+      template: 'html/index.html'
     }),
-    new HtmlPluginRemove(/<script src="\/bundle\.js"><\/script>/)
+    new HtmlPluginRemove(/<!-- DEV.* -->[\s\S]*?<!-- \/DEV -->/g)
   ],
   module: {
     rules: [

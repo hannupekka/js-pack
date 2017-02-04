@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run clean && NODE_ENV=production webpack --config webpack/webpack.config.prod.js --hide-modules=true",
     "clean": "rimraf dist",
-    "dev": "webpack-dev-server --config webpack/webpack.config.dev.js"
+    "dev": "webpack-dev-server --config webpack/webpack.config.dev.js --content-base html"
   },
   "keywords": [
     "js",
