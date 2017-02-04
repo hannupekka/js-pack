@@ -13,6 +13,9 @@ const postcssOptions = {
 };
 
 module.exports = {
+  devServer: {
+    stats: 'errors-only'
+  },
   devtool: 'eval',
   entry: [
     'eventsource-polyfill',

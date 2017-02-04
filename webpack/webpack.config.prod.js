@@ -21,6 +21,9 @@ const postcssOptions = {
 };
 
 module.exports = {
+  stats: {
+    assets: true
+  },
   devtool: 'source-map',
   entry: [
     './js/index'
