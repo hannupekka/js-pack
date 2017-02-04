@@ -1,0 +1,39 @@
+{
+  "extends": "airbnb-base",
+  "parser": "babel-eslint",
+  "rules": {
+    "no-global-assign": 0,
+    "no-underscore-dangle": 0,
+    "new-cap": 0,
+    "no-unsafe-negation": 0,
+    "comma-dangle": 0,
+    "arrow-body-style": 0,
+    "no-duplicate-imports": 0,
+    "import/no-unresolved": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ]
+  },
+  "globals": {
+    "describe": false,
+    "it": false,
+    "before": false,
+    "beforeEach": false,
+    "after": false,
+    "afterEach": false,
+    "expect": false
+  },
+  "env": {
+    "browser": true
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack/webpack.config.dev.js"
+      }
+    }
+  }
+}
