@@ -37,6 +37,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.html?/,
+        use: ['raw-loader']
+      },
+      {
         test: /\.js?/,
         exclude: [/node_modules/, /styles/],
         use: ['babel-loader']
@@ -121,6 +125,7 @@ module.exports = {
   resolve: {
     modules: [
       'node_modules',
+      'html',
       'js',
       'less'
     ]
