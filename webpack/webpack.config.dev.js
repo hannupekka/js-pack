@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const postcssFixes = require('postcss-fixes');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const postcssOptions = {
   plugins: [
@@ -32,14 +33,13 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
+    }),
+    new HtmlWebpackPlugin({
+      template: 'html/index.html'
     })
   ],
   module: {
     rules: [
-      {
-        test: /\.html?/,
-        use: ['raw-loader']
-      },
       {
         test: /\.js?/,
         exclude: [/node_modules/, /styles/],

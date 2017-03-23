@@ -5,7 +5,6 @@ const postcssFixes = require('postcss-fixes');
 const cssnano = require('cssnano');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlPluginRemove = require('html-webpack-plugin-remove');
 
 const postcssOptions = {
   plugins: [
@@ -48,8 +47,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: 'html/index.html'
-    }),
-    new HtmlPluginRemove(/<!-- DEV.* -->[\s\S]*?<!-- \/DEV -->/g)
+    })
   ],
   module: {
     rules: [
@@ -145,6 +143,7 @@ module.exports = {
   resolve: {
     modules: [
       'node_modules',
+      'html',
       'js',
       'less'
     ]
