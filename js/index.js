@@ -10,7 +10,6 @@ import 'scripts.js';
 
 // Require our HTML in development for HMR to work also with HTML changes.
 if (process.env.NODE_ENV !== 'production') {
-  // eslint-disable-next-line
-  require('index.html');
+  System.import('index.html');
 }
 
